@@ -1,0 +1,12 @@
+# Xcode
+*.xcuserdatad
+
+#macOS
+*.DS_Store
+*.icloud
+
+#Swift
+.swiftpm
+.build
+Package.resolved
+Sources/GLFW/.build/manifest.db

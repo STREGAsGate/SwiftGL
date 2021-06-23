@@ -1,0 +1,7 @@
+module OpenGL_Windows [system] {
+    header "shim.h"
+    link "gdi32"
+    link "glu32"
+    link "opengl32"
+    export *
+}
