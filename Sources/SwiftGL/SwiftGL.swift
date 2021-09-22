@@ -1157,6 +1157,10 @@ public let glBackBuffer = GL_BACK
     _glDepthFunc(GLenum(function.value))
 }
 
+@inlinable public func glDepthMask(_ enabled: Bool) {
+    _glDepthMask(enabled ? GLboolean(GL_TRUE) : GLboolean(GL_FALSE))
+}
+
 @inlinable public func glFramebufferTexture2D(target: OpenGL.Framebuffer.Target = .draw, attachment: OpenGL.Framebuffer.Attachment, textureTarget textarget: OpenGL.Texture.Target = .texture2D, texture: GLuint, level: GLint = 0) {
     _glFramebufferTexture2D(GLenum(target.value), GLenum(attachment.value), GLenum(textarget.value), texture, level)
 }

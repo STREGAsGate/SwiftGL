@@ -484,6 +484,10 @@ public typealias GLdouble = OpenGL_Linux.GLdouble
     OpenGL_Linux.glDepthFunc(function)
 }
 
+@_transparent @usableFromInline internal func _glDepthMask(_ enabled: GLboolean) {
+    OpenGL_Linux.glDepthMask(enabled)
+}
+
 @_transparent @usableFromInline internal func _glFramebufferTexture2D(_ target: GLenum, _ attachment: GLenum, _ textarget: GLenum, _ texture: GLuint, _ level: GLint) {
     OpenGL_Linux.glFramebufferTexture2D(target, attachment, textarget, texture, level)
 }

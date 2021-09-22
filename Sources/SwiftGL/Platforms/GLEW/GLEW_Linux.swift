@@ -478,6 +478,10 @@ public func glewInit() {
     GLEW.__glewDepthFunc(function)
 }
 
+@_transparent @usableFromInline internal func _glDepthMask(_ enabled: GLboolean) {
+    GLEW.glDepthMask(enabled)
+}
+
 @_transparent @usableFromInline internal func _glFramebufferTexture2D(_ target: GLenum, _ attachment: GLenum, _ textarget: GLenum, _ texture: GLuint, _ level: GLint) {
     GLEW.__glewFramebufferTexture2D(target, attachment, textarget, texture, level)
 }

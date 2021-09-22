@@ -486,6 +486,10 @@ public typealias GLdouble = Double
     fatalError("OpenGL Not Supported")
 }
 
+@_transparent @usableFromInline internal func _glDepthMask(_ enabled: GLboolean) {
+    fatalError("OpenGL Not Supported")
+}
+
 @_transparent @usableFromInline internal func _glFramebufferTexture2D(_ target: GLenum, _ attachment: GLenum, _ textarget: GLenum, _ texture: GLuint, _ level: GLint) {
     fatalError("OpenGL Not Supported")
 }

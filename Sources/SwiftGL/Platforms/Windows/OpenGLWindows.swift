@@ -480,6 +480,10 @@ public typealias GLdouble = OpenGL_Windows.GLdouble
     OpenGL_Windows.glDepthFunc(function)
 }
 
+@_transparent @usableFromInline internal func _glDepthMask(_ enabled: GLboolean) {
+    OpenGL_Windows.glDepthMask(enabled)
+}
+
 @_transparent @usableFromInline internal func _glFramebufferTexture2D(_ target: GLenum, _ attachment: GLenum, _ textarget: GLenum, _ texture: GLuint, _ level: GLint) {
     OpenGL_Windows.glFramebufferTexture2D(target, attachment, textarget, texture, level)
 }
