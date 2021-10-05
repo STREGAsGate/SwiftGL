@@ -1,4 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-*.h linguist-vendored=false
+# Don't calculate the C source when determining project languages
+Sources/SwiftGL_Linux/** linguist-vendored
+Sources/SwiftGL_Windows/** linguist-vendored
