@@ -2,5 +2,5 @@
 * text=auto
 
 # Don't calculate the C source when determining project languages
-Sources/SwiftGL_Linux/** linguist-vendored
-Sources/SwiftGL_Windows/** linguist-vendored
+Sources/OpenGL_Linux/** linguist-vendored
+Sources/OpenGL_Windows/** linguist-vendored
