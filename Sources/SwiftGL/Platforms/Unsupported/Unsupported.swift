@@ -28,6 +28,9 @@ import Foundation
 
 @_transparent @usableFromInline internal var GL_TRIANGLES: Int32 {fatalError("OpenGL Not Supported")}
 @_transparent @usableFromInline internal var GL_TRIANGLE_STRIP: Int32 {fatalError("OpenGL Not Supported")}
+@_transparent @usableFromInline internal var GL_POINTS: Int32 {fatalError("OpenGL Not Supported")}
+@_transparent @usableFromInline internal var GL_LINES: Int32 {fatalError("OpenGL Not Supported")}
+@_transparent @usableFromInline internal var GL_LINES_ADJACENCY: Int32 {fatalError("OpenGL Not Supported")}
 
 @_transparent @usableFromInline internal var GL_NO_ERROR: Int32 {fatalError("OpenGL Not Supported")}
 @_transparent @usableFromInline internal var GL_INVALID_ENUM: Int32 {fatalError("OpenGL Not Supported")}

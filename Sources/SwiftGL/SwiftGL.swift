@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OpenGL
 
 public enum OpenGL {
     public enum Blending {
@@ -117,11 +118,17 @@ public enum OpenGL {
         public enum Mode {
             case triangles
             case triangleStrip
+            case points
+            case lines
+            case lineStrip
             
             @usableFromInline internal var value: Int32 {
                 switch self {
                 case .triangles: return GL_TRIANGLES
                 case .triangleStrip: return GL_TRIANGLE_STRIP
+                case .points: return GL_POINTS
+                case .lines: return GL_LINES
+                case .lineStrip: return GL_LINES_ADJACENCY
                 }
             }
         }
@@ -827,7 +834,7 @@ public let glBackBuffer = GL_BACK
     var param: GLint = -1
     _glGetShaderiv(shader, GLenum(property.value), &param)
     
-    let error = glGetError()
+    let error = SwiftGL.glGetError()
     switch error {
     case .invalidOperation:
         throw OpenGL.Error(.invalidOperation, #function, ["shader compiler is not supported.",
@@ -1047,7 +1054,7 @@ public let glBackBuffer = GL_BACK
 
 @inlinable public func glDrawElements(mode: OpenGL.Elements.Mode, count: GLsizei, type: OpenGL.Types, indices: UnsafeRawPointer! = nil) throws {
     _glDrawElements(GLenum(mode.value), count, GLenum(type.value), indices)
-    let error = glGetError()
+    let error = SwiftGL.glGetError()
     switch error {
     case .invalidOperation:
         throw OpenGL.Error(error, #function, ["a geometry shader is active and mode is incompatible with the input primitive type of the geometry shader in the currently installed program object",
@@ -1064,7 +1071,7 @@ public let glBackBuffer = GL_BACK
 
 @inlinable public func glDrawElementsInstanced(mode: OpenGL.Elements.Mode, count: GLsizei, type: OpenGL.Types, indices: UnsafeRawPointer! = nil, instanceCount: GLsizei) throws {
     _glDrawElementsInstanced(GLenum(mode.value), count, GLenum(type.value), indices, instanceCount)
-    let error = glGetError()
+    let error = SwiftGL.glGetError()
     switch error {
     case .invalidOperation:
         throw OpenGL.Error(error, #function, ["a geometry shader is active and mode is incompatible with the input primitive type of the geometry shader in the currently installed program object",

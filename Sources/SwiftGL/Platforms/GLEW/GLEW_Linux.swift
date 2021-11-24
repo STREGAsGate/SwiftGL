@@ -22,6 +22,9 @@ import GLEW
 
 @_transparent @usableFromInline internal var GL_TRIANGLES: Int32 {return GLEW.GL_TRIANGLES}
 @_transparent @usableFromInline internal var GL_TRIANGLE_STRIP: Int32 {return GLEW.GL_TRIANGLE_STRIP}
+@_transparent @usableFromInline internal var GL_POINTS: Int32 {return GLEW.GL_POINTS}
+@_transparent @usableFromInline internal var GL_LINES: Int32 {return GLEW.GL_LINES}
+@_transparent @usableFromInline internal var GL_LINES_ADJACENCY: Int32 {return GLEW.GL_LINES_ADJACENCY}
 
 @_transparent @usableFromInline internal var GL_NO_ERROR: Int32 {return GLEW.GL_NO_ERROR}
 @_transparent @usableFromInline internal var GL_INVALID_ENUM: Int32 {return GLEW.GL_INVALID_ENUM}

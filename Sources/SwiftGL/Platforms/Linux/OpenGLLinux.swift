@@ -29,6 +29,9 @@ import OpenGL_Linux
 
 @_transparent @usableFromInline internal var GL_TRIANGLES: Int32 {return OpenGL_Linux.GL_TRIANGLES}
 @_transparent @usableFromInline internal var GL_TRIANGLE_STRIP: Int32 {return OpenGL_Linux.GL_TRIANGLE_STRIP}
+@_transparent @usableFromInline internal var GL_POINTS: Int32 {return OpenGL_Linux.GL_POINTS}
+@_transparent @usableFromInline internal var GL_LINES: Int32 {return OpenGL_Linux.GL_LINES}
+@_transparent @usableFromInline internal var GL_LINES_ADJACENCY: Int32 {return OpenGL_Linux.GL_LINES_ADJACENCY}
 
 @_transparent @usableFromInline internal var GL_NO_ERROR: Int32 {return OpenGL_Linux.GL_NO_ERROR}
 @_transparent @usableFromInline internal var GL_INVALID_ENUM: Int32 {return OpenGL_Linux.GL_INVALID_ENUM}
